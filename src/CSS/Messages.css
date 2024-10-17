@@ -1,0 +1,149 @@
+/* General chat window styling */
+.chat-window {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 800px;
+    margin: auto;
+    background-color: #36393f; /* Discord dark background */
+    border-radius: 8px;
+    overflow: hidden;
+    color: #dcddde;
+    font-family: 'Whitney', sans-serif;
+  }
+  
+  /* Header style */
+  .chat-header {
+    background-color: #2f3136;
+    padding: 15px;
+    border-bottom: 1px solid #202225;
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  
+  /* Messages section */
+  .chat-messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #36393f;
+  }
+  
+  .message {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .message-content {
+    margin-left: 10px;
+  }
+  
+  .message-author {
+    font-weight: bold;
+    color: #7289da; /* Discord blue for usernames */
+  }
+  
+  .message-text {
+    display: block;
+    color: #dcddde;
+    background-color: #40444b; /* Discord message background */
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 600px;
+    word-wrap: break-word;
+  }
+  
+  /* Input area */
+  .chat-input-container {
+    display: flex;
+    padding: 20px;
+    background-color: #40444b;
+    border-top: 1px solid #202225;
+  }
+  
+  .chat-input {
+    flex-grow: 1;
+    background-color: #2f3136;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff;
+    margin-right: 10px;
+    font-size: 1em;
+  }
+  
+  .send-button {
+    background-color: #7289da;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .send-button:hover {
+    background-color: #677bc4;
+  }
+
+  /* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    /* For tablets and smaller screens */
+    .chat-window {
+      max-width: 100%;
+      border-radius: 0; /* Remove border radius for smaller devices */
+    }
+  
+    .chat-messages {
+      padding: 15px;
+    }
+  
+    .message-text {
+      max-width: 100%;
+    }
+  
+    .chat-input-container {
+      padding: 15px;
+    }
+  
+    .chat-input {
+      font-size: 0.9em;
+    }
+  
+    .send-button {
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* For mobile screens */
+    .chat-header {
+      font-size: 1em;
+      padding: 10px;
+    }
+  
+    .chat-messages {
+      padding: 10px;
+    }
+  
+    .message-text {
+      font-size: 0.9em;
+      padding: 8px;
+    }
+  
+    .chat-input-container {
+      padding: 10px;
+    }
+  
+    .chat-input {
+      font-size: 0.85em;
+      padding: 8px;
+    }
+  
+    .send-button {
+      padding: 6px 12px;
+      font-size: 0.85em;
+    }
+  }

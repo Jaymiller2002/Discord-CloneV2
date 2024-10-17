@@ -1,21 +1,34 @@
-import { Link } from "react-router-dom"
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { getServers } from './API';
 
-const Title = () => {
+function App({ children }) {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate = useNavigate();
+
+  // Check authentication status when the app loads
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsAuthenticated(true);
+    } else {
+      setIsAuthenticated(false);
+      navigate('/login'); // Redirect to login if not authenticated
+    }
+  }, [navigate]);
+
+  // Don't render anything until authentication is confirmed
+  if (!isAuthenticated) {
+    return null; // Invisible until authentication state is verified
+  }
+
   return (
-    <h1>
-      Hello World!
-    </h1>
-  )
+    <>
+      {children} {/* Pass children for displaying pages inside the authenticated state */}
+    </>
+  );
 }
 
-function App() {
-  return (
-    <div className="p-5">
-      <Link to='/about'>About</Link>
-      <Title />
-    </div>
-  )
-}
+export default App;
 
 
-export default App

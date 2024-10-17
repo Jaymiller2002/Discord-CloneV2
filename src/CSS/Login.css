@@ -1,0 +1,87 @@
+/* CSS/Login.css */
+
+body {
+    background-color: #36393f; /* Discord background color */
+    color: #ffffff; /* Text color */
+    font-family: 'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; /* Discord font family */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .login-container {
+    background-color: #2f3136; /* Container background color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 400px; /* Set a width for the login box */
+    text-align: center;
+  }
+  
+  .login-title {
+    font-size: 24px; /* Title size */
+    margin-bottom: 20px; /* Spacing below title */
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+  }
+  
+  .login-input {
+    background-color: #40444b; /* Input background color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded input corners */
+    color: #ffffff; /* Input text color */
+    padding: 10px; /* Spacing inside input */
+    margin-bottom: 15px; /* Spacing between inputs */
+    font-size: 16px; /* Input font size */
+  }
+  
+  .login-input::placeholder {
+    color: #b9bbbe; /* Placeholder text color */
+  }
+  
+  .login-button {
+    background-color: #7289da; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded button corners */
+    padding: 10px; /* Spacing inside button */
+    font-size: 16px; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.2s; /* Smooth transition for hover */
+  }
+  
+  .login-button:hover {
+    background-color: #5b6eae; /* Darker shade on hover */
+  }
+  
+  .signup-navigation {
+    margin-top: 20px; /* Space above the signup prompt */
+    color: #b9bbbe; /* Light gray color for the text */
+  }
+  
+  .navigate-button {
+    background-color: #7289da; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded button corners */
+    padding: 10px; /* Spacing inside button */
+    font-size: 16px; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.2s; /* Smooth transition for hover */
+  }
+  
+  .navigate-button:hover {
+    background-color: #5b6eae; /* Darker shade on hover */
+  }
+
+  @media (max-width: 480px) {
+    .login-container {
+      width: 90%; /* Make the container wider on small screens */
+      padding: 20px; /* Reduce padding */
+    }
+  }
